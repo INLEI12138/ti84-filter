@@ -1,8 +1,8 @@
 # FILTER — Passive filter frequency response for TI-84 Plus CE
 
-A TI-BASIC program that computes the gain, dB and phase of a **passive voltage-divider filter** `Vin — ZS — Vout — ZP — GND`, where the series arm ZS and the shunt arm ZP are each built from series/parallel R, L and C — for a single frequency, or as a full Bode magnitude + phase plot. It is the companion of [AMPCALC](https://github.com/INLEI12138/ampcalc-ti84) (op-amp circuits).
+A TI-BASIC program that computes the gain, dB and phase of a **passive voltage-divider filter** `Vin — ZS — Vout — ZP — GND`, where the series arm ZS and the shunt arm ZP are each built from series/parallel R, L and C — for a single frequency, or as a full Bode magnitude + phase plot. It is the companion of [AMPCALC](https://github.com/INLEI12138/ti84-ampcalc) (op-amp circuits).
 
- 一个 TI-84 Plus CE 上的 TI-BASIC 程序,用来计算**无源分压式滤波器** `Vin — ZS — Vout — ZP — GND` 的增益、dB 和相位。串联臂 ZS 和并联臂 ZP 都可以由串联/并联的 R、L、C 组成;可以算单个频率,也可以画幅频 + 相频 Bode 图。它是 [AMPCALC](https://github.com/INLEI12138/ampcalc-ti84)(运放电路)的姊妹程序。
+ 一个 TI-84 Plus CE 上的 TI-BASIC 程序,用来计算**无源分压式滤波器** `Vin — ZS — Vout — ZP — GND` 的增益、dB 和相位。串联臂 ZS 和并联臂 ZP 都可以由串联/并联的 R、L、C 组成;可以算单个频率,也可以画幅频 + 相频 Bode 图。它是 [AMPCALC](https://github.com/INLEI12138/ti84-ampcalc)(运放电路)的姊妹程序。
 
 ---
 
@@ -114,7 +114,7 @@ ZS:先输入 `3300`,其余五项都输入 `0`。ZP:先输入 `0, 0, 0`(串联 R�
 
 ## Notes and limits
 
-- Passive, unloaded divider: `Vout` is measured with nothing connected to it. For an op-amp stage use [AMPCALC](https://github.com/INLEI12138/ampcalc-ti84); for a filter followed by an amplifier, run FILTER and add the amplifier gain (in dB) by hand.
+- Passive, unloaded divider: `Vout` is measured with nothing connected to it. For an op-amp stage use [AMPCALC](https://github.com/INLEI12138/ti84-ampcalc); for a filter followed by an amplifier, run FILTER and add the amplifier gain (in dB) by hand.
 - `F3DB` is the first point where the response is 3 dB below the pass-band peak, so it is only meaningful for single-corner low-pass / high-pass responses. For band-pass, notch or resonant circuits read the plot instead.
 - Ideal R, L, C.
 - Auto range extends two decades beyond the detected corner frequencies, up to 300 points; large ranges take about a minute to draw. Use MANUAL to reduce the number of points.
@@ -123,7 +123,7 @@ ZS:先输入 `3300`,其余五项都输入 `0`。ZP:先输入 `0, 0, 0`(串联 R�
 
 ## 注意事项与限制
 
-- 无源、空载分压器:`Vout` 是什么都不接时的输出。运放电路请用 [AMPCALC](https://github.com/INLEI12138/ampcalc-ti84);滤波器后面接放大器时,先用 FILTER 算滤波部分,再手动加上放大倍数(dB)。
+- 无源、空载分压器:`Vout` 是什么都不接时的输出。运放电路请用 [AMPCALC](https://github.com/INLEI12138/ti84-ampcalc);滤波器后面接放大器时,先用 FILTER 算滤波部分,再手动加上放大倍数(dB)。
 - `F3DB` 是响应第一次比通带峰值低 3 dB 的位置,所以只对单个转折点的低通/高通有意义。带通、陷波或谐振电路请直接看图。
 - 按理想的 R、L、C 计算。
 - 自动范围会在检测到的转折频率两侧各多取两个十倍频,最多 300 个点;范围很大时绘图大约需要一分钟。可以用 MANUAL 手动减少点数。
@@ -145,6 +145,18 @@ ZS:先输入 `3300`,其余五项都输入 `0`。ZP:先输入 `0, 0, 0`(串联 R�
 - `images/` — 电路图和示例图
 
 ---
+
+
+## Related programs / 相关程序
+
+Other TI-84 Plus CE programs by INLEI / INLEI 的其他 TI-84 Plus CE 程序：
+
+| Program / 程序 | Purpose | 用途 |
+|---|---|---|
+| [AMPCALC](https://github.com/INLEI12138/ti84-ampcalc) | Op-amp (inverting / non-inverting) gain, phase and Bode plot | 运放（反相/同相）增益、相位与 Bode 图 |
+| [DIODE](https://github.com/INLEI12138/ti84-diode) | Diode circuits: Shockley, series R, Zener, rectifiers, small-signal rd | 二极管电路：肖克利方程、串联电阻、稳压管、整流、小信号电阻 |
+| [ITER](https://github.com/INLEI12138/ti84-iteration) | Diode bias point by iteration, two-source mode, rd | 二极管工作点迭代求解（含双电源模式）与 rd |
+| [ZFORMULA](https://github.com/INLEI12138/ti84-zformula) | Series / parallel RLC impedance formula reference | 串联/并联 RLC 阻抗公式速查 |
 
 ## License
 
